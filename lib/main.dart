@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: mySeedColor),
       ),
-      home: const MyHomePage(title: 'CS 442 MAD Hot Reload Demo'),
+      home: const MyHomePage(title: 'CS 442 MAD Reload Demo'),
     );
   }
 }
@@ -35,7 +35,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   // TASK 3: Reset Tracker State
-  int _resetsUsed = 0; 
+  int _resetsUsed = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -67,25 +67,25 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            
+
             // TASK 2: Personalised Threshold Message
             if (_counter > myThreshold)
               const Text(
                 "You're on a roll!",
                 style: TextStyle(
-                  color: Colors.green, 
-                  fontSize: 18, 
-                  fontWeight: FontWeight.bold
+                  color: Colors.green,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              
+
             const SizedBox(height: 20),
-            
+
             // TASK 3: Reset Tracker UI
             Text('Resets used: $_resetsUsed'),
-            
+
             const SizedBox(height: 40),
-            
+
             // TASK 5: About Line
             const Text('Built by Maryam Bashir · BCS-23-017'),
           ],
